@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    app: flaskr
+    role: db
+spec:
+  selector:
+    app: flaskr
+    role: db
+  ports:
+  - port: 3306
+    targetPort: 3306
